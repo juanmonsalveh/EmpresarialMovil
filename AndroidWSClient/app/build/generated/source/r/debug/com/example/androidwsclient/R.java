@@ -1315,12 +1315,13 @@ containing a value of this type.
         public static final int action_mode_bar=0x7f0b002e;
         public static final int action_mode_bar_stub=0x7f0b002d;
         public static final int action_mode_close_button=0x7f0b0020;
-        public static final int action_settings=0x7f0b0042;
+        public static final int action_settings=0x7f0b0043;
         public static final int activity_chooser_view_content=0x7f0b0021;
         public static final int always=0x7f0b0016;
         public static final int beginning=0x7f0b0013;
         public static final int checkbox=0x7f0b0029;
         public static final int collapseActionView=0x7f0b0017;
+        public static final int convocatoryButton=0x7f0b0042;
         public static final int decor_content_parent=0x7f0b002f;
         public static final int default_activity_button=0x7f0b0024;
         public static final int dialog=0x7f0b001b;
@@ -1398,10 +1399,12 @@ containing a value of this type.
         public static final int abc_search_view=0x7f030015;
         public static final int abc_simple_dropdown_hint=0x7f030016;
         public static final int activity_android_wsclient=0x7f030017;
-        public static final int support_simple_spinner_dropdown_item=0x7f030018;
+        public static final int activity_convocatory=0x7f030018;
+        public static final int support_simple_spinner_dropdown_item=0x7f030019;
     }
     public static final class menu {
         public static final int android_wsclient=0x7f0c0000;
+        public static final int menu_convocatory=0x7f0c0001;
     }
     public static final class string {
         public static final int abc_action_bar_home_description=0x7f050000;
@@ -1423,6 +1426,7 @@ containing a value of this type.
         public static final int action_settings=0x7f050010;
         public static final int app_name=0x7f050011;
         public static final int hello_world=0x7f050012;
+        public static final int title_activity_convocatory=0x7f050013;
     }
     public static final class style {
         /**  API 11 theme customizations can go here. 
