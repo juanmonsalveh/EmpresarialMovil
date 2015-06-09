@@ -8,6 +8,7 @@ import org.ksoap2.transport.HttpTransportSE;
 
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 import android.app.Activity;
 import android.os.Bundle;
@@ -20,6 +21,7 @@ public class AndroidWSClientActivity extends Activity {
     private static final String URL = "http://www.spopatest.unal.edu.co/CompanyMobileServicesService/CompanyMobileServicesService?wsdl";
 
     Button hola;//holaButton
+    EditText name;//nameTxt
 
     /**
      * Called when the activity is first created.
@@ -31,7 +33,7 @@ public class AndroidWSClientActivity extends Activity {
 
 
         hola = (Button) findViewById(R.id.holaButton);
-
+        name = (EditText) findViewById(R.id.nameTxt);
         hola.setOnClickListener(new View.OnClickListener() {
                                     @Override
                                     public void onClick(View v) {
@@ -40,10 +42,10 @@ public class AndroidWSClientActivity extends Activity {
                                             public void run() {
                                                 try {
 
-                                                    String name = "Juan";
+                                                    String nameT = "Hi Sr. " + name.getText();
 
                                                     SoapObject request = new SoapObject(NAMESPACE, METHOD_NAME);
-                                                    request.addProperty("name", name);
+                                                    request.addProperty("name", nameT);
                                                     SoapSerializationEnvelope envelope = new SoapSerializationEnvelope(SoapEnvelope.VER11);
                                                     envelope.setOutputSoapObject(request);
 

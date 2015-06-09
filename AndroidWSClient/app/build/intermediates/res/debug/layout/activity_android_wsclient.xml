@@ -12,10 +12,11 @@
         android:id="@+id/textView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_marginLeft="49dp"
-        android:layout_marginTop="68dp"
-        android:text="TextView" />
+        android:layout_marginTop="52dp"
+        android:text="TextView"
+        android:layout_below="@+id/nameTxt"
+        android:layout_alignLeft="@+id/holaButton"
+        android:layout_alignStart="@+id/holaButton" />
 
     <Button
         android:id="@+id/holaButton"
@@ -27,4 +28,14 @@
         android:layout_marginTop="41dp"
         android:text="Button" />
 
-</RelativeLayout><!-- From: file:/Users/juanmonsalveh/AndroidStudioProjects/AndroidWSClient/app/src/main/res/layout/activity_android_wsclient.xml -->
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/nameTxt"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+</RelativeLayout><!-- From: file:/Users/juanmonsalveh/EmpresarialMovil/AndroidWSClient/app/src/main/res/layout/activity_android_wsclient.xml -->
