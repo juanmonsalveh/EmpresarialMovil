@@ -1315,13 +1315,13 @@ containing a value of this type.
         public static final int action_mode_bar=0x7f0b002e;
         public static final int action_mode_bar_stub=0x7f0b002d;
         public static final int action_mode_close_button=0x7f0b0020;
-        public static final int action_settings=0x7f0b0043;
+        public static final int action_settings=0x7f0b0044;
         public static final int activity_chooser_view_content=0x7f0b0021;
         public static final int always=0x7f0b0016;
         public static final int beginning=0x7f0b0013;
         public static final int checkbox=0x7f0b0029;
         public static final int collapseActionView=0x7f0b0017;
-        public static final int convocatoryButton=0x7f0b0042;
+        public static final int convocatoryButton=0x7f0b0043;
         public static final int decor_content_parent=0x7f0b002f;
         public static final int default_activity_button=0x7f0b0024;
         public static final int dialog=0x7f0b001b;
@@ -1347,6 +1347,7 @@ containing a value of this type.
         public static final int progress_circular=0x7f0b0005;
         public static final int progress_horizontal=0x7f0b0006;
         public static final int radio=0x7f0b002b;
+        public static final int resultTxt=0x7f0b0042;
         public static final int search_badge=0x7f0b0035;
         public static final int search_bar=0x7f0b0034;
         public static final int search_button=0x7f0b0036;

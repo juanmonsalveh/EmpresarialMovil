@@ -7,14 +7,14 @@
     tools:context="com.example.androidwsclient.ConvocatoryActivity">
 
     <TextView android:text="@string/hello_world" android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:id="@+id/resultTxt" />
 
     <Button
         android:id="@+id/convocatoryButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
-        android:layout_below="@+id/textView1"
         android:layout_marginLeft="49dp"
         android:layout_marginTop="41dp"
         android:text="Button" />
