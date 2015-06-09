@@ -25,7 +25,7 @@ import model.LongList;
 public class ConvocatoryActivity extends ActionBarActivity {
 
     private static final String SOAP_ACTION = "http://www.spopatest.unal.edu.co/CompanyMobileServicesService/hello";
-    private static final String METHOD_NAME = "hello";
+    private static final String METHOD_NAME = "hello2";
     private static final String NAMESPACE = "http://facadeWS.spopa.unal.dev/";
     private static final String URL = "http://www.spopatest.unal.edu.co/CompanyMobileServicesService/CompanyMobileServicesService?wsdl";
 
@@ -77,16 +77,19 @@ public class ConvocatoryActivity extends ActionBarActivity {
 //ok
                                                             final String nameT = "Sr. 2";
                                                             //----------------
-                                                            /*
+                                                            ///*
                                                             SoapObject request = new SoapObject(NAMESPACE, METHOD_NAME);
                                                             request.addProperty("convocatoryVO", convocatory);
                                                             SoapSerializationEnvelope envelope = new SoapSerializationEnvelope(SoapEnvelope.VER11);
                                                             envelope.setOutputSoapObject(request);
 
                                                             HttpTransportSE ht = new HttpTransportSE(URL);
-                                                            ht.call(SOAP_ACTION, envelope);
+                                                            //ht.call(SOAP_ACTION, envelope);
+                                                            ht.call(NAMESPACE + METHOD_NAME,envelope);
+                                                            android.util.Log.i("REQUEST--->", ht.requestDump);
+                                                            android.util.Log.i("RESPONSE--->", ht.responseDump);
                                                             final SoapPrimitive response = (SoapPrimitive) envelope.getResponse();
-                                                            final String str = (response == null) ? "nulistico " : response.toString();*/
+                                                            final String str = (response == null) ? "nulistico " : response.toString();//*/
                                                             //----------------
                                                             runOnUiThread(new Runnable() {
                                                                 public void run() {

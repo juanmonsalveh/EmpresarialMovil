@@ -50,7 +50,8 @@ public class AndroidWSClientActivity extends Activity {
                                                     envelope.setOutputSoapObject(request);
 
                                                     HttpTransportSE ht = new HttpTransportSE(URL);
-                                                    ht.call(SOAP_ACTION, envelope);
+                                                    //ht.call(SOAP_ACTION, envelope);
+                                                    ht.call(NAMESPACE + METHOD_NAME,envelope);
                                                     final SoapPrimitive response = (SoapPrimitive) envelope.getResponse();
                                                     final String str = response.toString();
 
