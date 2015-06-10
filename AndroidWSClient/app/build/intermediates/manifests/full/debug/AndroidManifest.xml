@@ -29,6 +29,10 @@
         <activity
             android:name="com.example.androidwsclient.ConvocatoryActivity"
             android:label="@string/title_activity_convocatory" >
+        </activity>
+        <activity
+            android:name="com.example.androidwsclient.ConsumeList"
+            android:label="@string/title_activity_consume_list" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

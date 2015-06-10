@@ -9,7 +9,6 @@
         android:targetSdkVersion="21" />
 
     <uses-permission android:name="android.permission.INTERNET" />
-
     <uses-permission
         android:name="android.permission.WRITE_EXTERNAL_STORAGE"
         android:maxSdkVersion="18" />
@@ -26,11 +25,15 @@
         <activity
             android:name=".AndroidWSClientActivity"
             android:label="@string/app_name" >
-
         </activity>
         <activity
             android:name=".ConvocatoryActivity"
             android:label="@string/title_activity_convocatory" >
+
+        </activity>
+        <activity
+            android:name=".ConsumeList"
+            android:label="@string/title_activity_consume_list" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
