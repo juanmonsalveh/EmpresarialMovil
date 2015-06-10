@@ -1,5 +1,6 @@
 package com.example.androidwsclient;
 
+import android.app.Activity;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -11,6 +12,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 import org.ksoap2.SoapEnvelope;
+import org.ksoap2.serialization.MarshalDate;
 import org.ksoap2.serialization.SoapObject;
 import org.ksoap2.serialization.SoapPrimitive;
 import org.ksoap2.serialization.SoapSerializationEnvelope;
@@ -22,11 +24,11 @@ import model.ConvocatoryVO;
 import model.LongList;
 
 
-public class ConvocatoryActivity extends ActionBarActivity {
+public class ConvocatoryActivity extends Activity {
 
     private static final String METHOD_NAME = "closeConvocatory";
     private static final String NAMESPACE = "http://facadeWS.spopa.unal.dev/";
-    private static final String URL = "http://http://www.spopatest.unal.edu.co/SharedMobileServicesService/SharedMobileServices?wsdl";
+    private static final String URL = "http://www.spopatest.unal.edu.co/SharedMobileServicesService/SharedMobileServices?wsdl";
 
     Button convocatoryB;//convocatoryButton
 
@@ -60,32 +62,38 @@ public class ConvocatoryActivity extends ActionBarActivity {
 
             final ConvocatoryVO convocatory = fillconvocatoryVO();
 //ok
-            final String nameT = "Sr. 2";
             //----------------
             ///*
             SoapObject request = new SoapObject(NAMESPACE, METHOD_NAME);
             request.addProperty("convocatoryVO", convocatory);
             SoapSerializationEnvelope envelope = new SoapSerializationEnvelope(SoapEnvelope.VER11);
-            envelope.setOutputSoapObject(request);
-
-            HttpTransportSE ht = new HttpTransportSE(URL);
+            new MarshalDate().register(envelope);//serializacion Fechas...
+            envelope.setOutputSoapObject(request);//
+envelope.implicitTypes=false;//fin seria. fechas
+            HttpTransportSE ht = new HttpTransportSE(URL,6000);
+            ht.debug=true;
             //HttpTransportSE ht = new HttpTransportSE(URL);
             //ht.call(SOAP_ACTION, envelope);
-            for (int i = 0; i < 8; i++) {
                 ht.call(NAMESPACE + METHOD_NAME,envelope);
-            }
-            Log.i("xD info", ht.requestDump);
-            Log.i("xD info",ht.responseDump);
+       
             Log.i("REQUEST--->", ht.requestDump);
             Log.i("RESPONSE--->", ht.responseDump);
-            final SoapPrimitive response = (SoapPrimitive) envelope.getResponse();
-            final String str = (response == null) ? "nulistico " : "noNull";//response.toString();//*/
+            //SoapObject response = (SoapObject)envelope.getResponse();
+
+            SoapObject response = (SoapObject)envelope.bodyIn;
+            Object obj = response.getPrimitivePropertyAsString("return");
+            String str1="q mierda esto de hilos internos usen asynctasks";
+            if(obj!=null){
+             str1=obj.toString();}else{
+                str1="paila perrros";
+            }
+            final String str=str1;
             //----------------
             runOnUiThread(new Runnable() {
                 public void run() {
                     TextView result;
                     result = (TextView) findViewById(R.id.resultTxt);//Text view id is textView1
-                    result.setText(str);//(convocatory.toString());//(nameT);//
+                    result.setText(str);//(convocatory.toString());//
                 }
             });
         } catch (Exception e) {
