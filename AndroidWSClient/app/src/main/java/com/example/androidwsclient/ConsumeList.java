@@ -16,16 +16,18 @@ import org.ksoap2.serialization.SoapSerializationEnvelope;
 import org.ksoap2.transport.HttpTransportSE;
 
 import java.util.Date;
+import java.util.Vector;
 
 import model.ConvocatoryVO;
 import model.CurricularProgramList;
+import model.CurricularProgramVO;
 import model.LongList;
 
 
 public class ConsumeList extends ActionBarActivity {
 
 
-    private static final String METHOD_NAME = "searchCurricularProgramsByConvocatory";
+    private static final String METHOD_NAME = "searchCurricularProgramWithAgreement";
     private static final String NAMESPACE = "http://facadeWS.spopa.unal.dev/";
     private static final String URL = "http://www.spopatest.unal.edu.co/CompanyMobileServicesService/CompanyMobileServicesService?wsdl";
 
@@ -64,7 +66,7 @@ public class ConsumeList extends ActionBarActivity {
             //----------------
             ///*
             SoapObject request = new SoapObject(NAMESPACE, METHOD_NAME);
-            request.addProperty("idCompany", 57281);
+            request.addProperty("idCompany", 18894);
             SoapSerializationEnvelope envelope = new SoapSerializationEnvelope(SoapEnvelope.VER11);
             new MarshalDate().register(envelope);//serializacion Fechas...
             envelope.setOutputSoapObject(request);//
@@ -77,10 +79,10 @@ public class ConsumeList extends ActionBarActivity {
 
             Log.i("REQUEST--->", ht.requestDump);
             Log.i("RESPONSE--->", ht.responseDump);
-
+//-----------------------------------
             //SoapObject response = (SoapObject)envelope.getResponse();
-            CurricularProgramList response = (CurricularProgramList)envelope.getResponse();
-            //SoapObject response = (SoapObject)envelope.bodyIn;
+            //CurricularProgramList response = (CurricularProgramList)envelope.getResponse();
+            SoapObject response = (SoapObject)envelope.bodyIn;
             //Object obj = response.getPrimitivePropertyAsString("return");
             String str1="str vacio";
             if(response!=null &&response.getPropertyCount()>0){
@@ -89,7 +91,7 @@ public class ConsumeList extends ActionBarActivity {
                 str1="paila perrros";
             }
             final String str=str1;
-            //----------------
+//------------------------------------
             runOnUiThread(new Runnable() {
                 public void run() {
                     TextView result;
