@@ -85,8 +85,19 @@ public class ConsumeList extends ActionBarActivity {
             SoapObject response = (SoapObject)envelope.bodyIn;
             //Object obj = response.getPrimitivePropertyAsString("return");
             String str1="str vacio";
+            int responseSize;
+            CurricularProgramList curricularPrograms = new CurricularProgramList();
+            CurricularProgramVO cpVO;
             if(response!=null &&response.getPropertyCount()>0){
-                str1=response.getProperty(0).toString();
+                //str1=response.getProperty(0).toString();
+                str1 = "";
+                responseSize = response.getPropertyCount();
+                for (int i = 0; i < responseSize; i++) {
+                    SoapObject so =  (SoapObject) response.getProperty(i);
+                    cpVO = new CurricularProgramVO(so);
+                    curricularPrograms.add(cpVO);
+                    str1 += cpVO.getNameCurricularProgramVO() + "\n";
+                }
             }else{
                 str1="paila perrros";
             }

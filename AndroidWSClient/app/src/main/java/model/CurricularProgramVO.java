@@ -3,6 +3,8 @@ package model;
 
 import org.ksoap2.serialization.KvmSerializable;
 import org.ksoap2.serialization.PropertyInfo;
+import org.ksoap2.serialization.SoapObject;
+import org.ksoap2.serialization.SoapPrimitive;
 
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -34,6 +36,178 @@ public class CurricularProgramVO implements KvmSerializable {
     private Integer preselected = 0;
     private Integer selected = 0;
     private Integer noApproved = 0;
+
+    public CurricularProgramVO(){
+    }
+
+    public CurricularProgramVO(SoapObject object){
+        if(object.hasProperty("idCurricularProgramVO")){
+            Object obj=object.getProperty("idCurricularProgramVO");
+            if(obj!=null && obj.getClass().equals(SoapPrimitive.class)){
+                SoapPrimitive value=(SoapPrimitive) obj;
+                if(value.toString()!=null){
+                    this.idCurricularProgramVO = Long.parseLong(value.toString());
+                }
+            }else if(obj!=null && obj instanceof String){
+                this.idCurricularProgramVO=(Long)obj;
+            }
+        }
+        if(object.hasProperty("nameCurricularProgramVO")){
+            Object obj=object.getProperty("nameCurricularProgramVO");
+            if(obj!=null && obj.getClass().equals(SoapPrimitive.class)){
+                SoapPrimitive value=(SoapPrimitive) obj;
+                if(value.toString()!=null){
+                    this.nameCurricularProgramVO=value.toString();
+                }
+            }else if(obj!=null && obj instanceof String){
+                this.nameCurricularProgramVO=(String ) obj;
+            }
+        }
+        if(object.hasProperty("totalCreditsCurricularProgramVO")){
+            Object obj=object.getProperty("totalCreditsCurricularProgramVO");
+            if(obj!=null && obj.getClass().equals(SoapPrimitive.class)){
+                SoapPrimitive value=(SoapPrimitive) obj;
+                if(value.toString()!=null){
+                    this.totalCreditsCurricularProgramVO= Integer.parseInt(value.toString());
+                }
+            }else if(obj!=null && obj instanceof String){
+                this.totalCreditsCurricularProgramVO= (int) obj;
+            }
+        }
+        if(object.hasProperty("idDepartmentVO")){
+            Object obj=object.getProperty("idDepartmentVO");
+            if(obj!=null && obj.getClass().equals(SoapPrimitive.class)){
+                SoapPrimitive value=(SoapPrimitive) obj;
+                if(value.toString()!=null){
+                    this.idDepartmentVO= Long.parseLong(value.toString());
+                }
+            }else if(obj!=null && obj instanceof String){
+                this.idDepartmentVO= (Long)obj;
+            }
+        }
+        if(object.hasProperty("idInternshipAUVO")){
+            Object obj=object.getProperty("idInternshipAUVO");
+            if(obj!=null && obj.getClass().equals(SoapPrimitive.class)){
+                SoapPrimitive value=(SoapPrimitive) obj;
+                if(value.toString()!=null){
+                    this.idInternshipAUVO= Long.parseLong(value.toString());
+                }
+            }else if(obj!=null && obj instanceof String){
+                this.idInternshipAUVO=(Long) obj;
+            }
+        }
+        if(object.hasProperty("isActiveConvocatory")){
+            Object obj=object.getProperty("isActiveConvocatory");
+            if(obj!=null && obj.getClass().equals(SoapPrimitive.class)){
+                SoapPrimitive value=(SoapPrimitive) obj;
+                if(value.toString()!=null){
+                    this.isActiveConvocatory= Boolean.valueOf(value.toString());
+                }
+            }else if(obj!=null && obj instanceof String){
+                this.isActiveConvocatory= (Boolean) obj;
+            }
+        }
+        if(object.hasProperty("isRejectedConvocatory")){
+            Object obj=object.getProperty("isRejectedConvocatory");
+            if(obj!=null && obj.getClass().equals(SoapPrimitive.class)){
+                SoapPrimitive value=(SoapPrimitive) obj;
+                if(value.toString()!=null){
+                    this.isRejectedConvocatory= Boolean.valueOf(value.toString());
+                }
+            }else if(obj!=null && obj instanceof String){
+                this.isRejectedConvocatory= (Boolean) obj;
+            }
+        }
+        if(object.hasProperty("hasInnerProcessConvocatory")){
+            Object obj=object.getProperty("hasInnerProcessConvocatory");
+            if(obj!=null && obj.getClass().equals(SoapPrimitive.class)){
+                SoapPrimitive value=(SoapPrimitive) obj;
+                if(value.toString()!=null){
+                    this.hasInnerProcessConvocatory= Boolean.valueOf(value.toString());
+                }
+            }else if(obj!=null && obj instanceof String){
+                this.hasInnerProcessConvocatory= (Boolean) obj;
+            }
+        }
+        if(object.hasProperty("hasAgreement")){
+            Object obj=object.getProperty("hasAgreement");
+            if(obj!=null && obj.getClass().equals(SoapPrimitive.class)){
+                SoapPrimitive value=(SoapPrimitive) obj;
+                if(value.toString()!=null){
+                    this.hasAgreement= Boolean.valueOf(value.toString());
+                }
+            }else if(obj!=null && obj instanceof String){
+                this.hasAgreement= (Boolean) obj;
+            }
+        }
+        if(object.hasProperty("inReview")){
+            Object obj=object.getProperty("inReview");
+            if(obj!=null && obj.getClass().equals(SoapPrimitive.class)){
+                SoapPrimitive value=(SoapPrimitive) obj;
+                if(value.toString()!=null){
+                    this.inReview= Integer.valueOf(value.toString());
+                }
+            }else if(obj!=null && obj instanceof String){
+                this.inReview= (Integer) obj;
+            }
+        }
+        if(object.hasProperty("concerned")){
+            Object obj=object.getProperty("concerned");
+            if(obj!=null && obj.getClass().equals(SoapPrimitive.class)){
+                SoapPrimitive value=(SoapPrimitive) obj;
+                if(value.toString()!=null){
+                    this.concerned= Integer.valueOf(value.toString());
+                }
+            }else if(obj!=null && obj instanceof String){
+                this.concerned= (Integer) obj;
+            }
+        }
+        if(object.hasProperty("noSelected")){
+            Object obj=object.getProperty("noSelected");
+            if(obj!=null && obj.getClass().equals(SoapPrimitive.class)){
+                SoapPrimitive value=(SoapPrimitive) obj;
+                if(value.toString()!=null){
+                    this.noSelected= Integer.valueOf(value.toString());
+                }
+            }else if(obj!=null && obj instanceof String){
+                this.noSelected= (Integer) obj;
+            }
+        }
+        if(object.hasProperty("preselected")){
+            Object obj=object.getProperty("preselected");
+            if(obj!=null && obj.getClass().equals(SoapPrimitive.class)){
+                SoapPrimitive value=(SoapPrimitive) obj;
+                if(value.toString()!=null){
+                    this.preselected= Integer.valueOf(value.toString());
+                }
+            }else if(obj!=null && obj instanceof String){
+                this.preselected= (Integer) obj;
+            }
+        }
+        if(object.hasProperty("selected")){
+            Object obj=object.getProperty("selected");
+            if(obj!=null && obj.getClass().equals(SoapPrimitive.class)){
+                SoapPrimitive value=(SoapPrimitive) obj;
+                if(value.toString()!=null){
+                    this.selected= Integer.valueOf(value.toString());
+                }
+            }else if(obj!=null && obj instanceof String){
+                this.selected= (Integer) obj;
+            }
+        }
+        if(object.hasProperty("noApproved")){
+            Object obj=object.getProperty("noApproved");
+            if(obj!=null && obj.getClass().equals(SoapPrimitive.class)){
+                SoapPrimitive value=(SoapPrimitive) obj;
+                if(value.toString()!=null){
+                    this.noApproved= Integer.valueOf(value.toString());
+                }
+            }else if(obj!=null && obj instanceof String){
+                this.noApproved= (Integer) obj;
+            }
+        }
+
+    }
 
     @Override
     public String toString() {
