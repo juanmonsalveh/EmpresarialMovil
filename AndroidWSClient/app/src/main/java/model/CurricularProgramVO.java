@@ -7,6 +7,7 @@ import org.ksoap2.serialization.SoapObject;
 import org.ksoap2.serialization.SoapPrimitive;
 
 import java.io.Serializable;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.Hashtable;
@@ -37,6 +38,24 @@ public class CurricularProgramVO implements KvmSerializable {
     private Integer selected = 0;
     private Integer noApproved = 0;
 
+    private static String [] formats={"yyyy-MM-dd'T'HH:mm:ss.SSS",
+            "yyyy-MM-dd'T'HH:mm:ss.SSSXXX",
+            "yyyy-MM-dd'T'HH:mm:ss",
+            "yyyy-MM-dd'T'HH:mm",
+            "yyyy-MM-dd",
+            "dd/mm/yyyy"};
+
+    public static Date parsesDate(String dateToFormat){
+        for (String format : formats){
+            try {
+                SimpleDateFormat formater = new SimpleDateFormat(format);
+                return formater.parse(dateToFormat);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+        return null;
+    }
     public CurricularProgramVO(){
     }
 
