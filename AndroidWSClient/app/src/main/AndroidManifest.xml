@@ -29,7 +29,6 @@
         <activity
             android:name=".ConvocatoryActivity"
             android:label="@string/title_activity_convocatory" >
-
         </activity>
         <activity
             android:name=".ConsumeList"
@@ -39,6 +38,10 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity
+            android:name=".CreateActivity"
+            android:label="@string/title_activity_create" >
         </activity>
     </application>
 

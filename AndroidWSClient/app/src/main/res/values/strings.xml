@@ -6,5 +6,6 @@
     <string name="action_settings">Settings</string>
     <string name="title_activity_convocatory">ConvocatoryActivity</string>
     <string name="title_activity_consume_list">ConsumeList</string>
+    <string name="title_activity_create">CreateActivity</string>
 
 </resources>

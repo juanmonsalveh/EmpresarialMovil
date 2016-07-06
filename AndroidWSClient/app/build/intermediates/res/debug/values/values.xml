@@ -166,6 +166,7 @@
     <string name="hello_world">Hello world!</string>
     <string name="title_activity_consume_list">ConsumeList</string>
     <string name="title_activity_convocatory">ConvocatoryActivity</string>
+    <string name="title_activity_create">CreateActivity</string>
     <!-- From: file:/Users/juanmonsalveh/EmpresarialMovil/AndroidWSClient/app/src/main/res/values/styles.xml -->
     <eat-comment/>
     <style name="AppBaseTheme" parent="Theme.AppCompat.Light">

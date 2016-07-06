@@ -498,7 +498,7 @@ public class CurricularProgramVO implements KvmSerializable {
                 this.isRejectedConvocatory = Boolean.parseBoolean(value.toString());
                 break;
             case 10:
-                this.revisionConvocatoryDate = new Date(value.toString());
+                this.revisionConvocatoryDate = parsesDate(value.toString());
                 break;
             case 11:
                 this.rejectedReasonConvocatory = value.toString();

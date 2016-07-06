@@ -25,14 +25,14 @@ public class CompanyVO implements Serializable {
     private byte[] rutCompanyVO;
     private String faxCompanyVO;
     private Boolean activeCompanyVO;
-    private List<String> employeesCompanyVO = new ArrayList<String>();
+    private StringList employeesCompanyVO;
     private Long idCityVO;
     private Long idCompanyAUVO;
-    private List<Long> idCompanyUserVOs = new ArrayList<Long>();
+    private LongList idCompanyUserVOs;
     private String typeCompanyVO;
-    private List<Long> idConvocatoryVOs = new ArrayList<Long>();
-    private List<Long> idAgreementVOs = new ArrayList<Long>();
-    private List<Long> idConcreteModalityVOs;
+    private LongList idConvocatoryVOs;
+    private LongList idAgreementVOs;
+    private LongList idConcreteModalityVOs;
     private Date registrationDateCompanyVO;
 
     @Override
@@ -53,7 +53,7 @@ public class CompanyVO implements Serializable {
         return idConcreteModalityVOs;
     }
 
-    public void setIdConcreteModalityVOs(List<Long> idConcreteModalityVOs) {
+    public void setIdConcreteModalityVOs(LongList idConcreteModalityVOs) {
         this.idConcreteModalityVOs = idConcreteModalityVOs;
     }
 
@@ -69,7 +69,7 @@ public class CompanyVO implements Serializable {
         return idConvocatoryVOs;
     }
 
-    public void setIdConvocatoryVOs(List<Long> idConvocatoryVOs) {
+    public void setIdConvocatoryVOs(LongList idConvocatoryVOs) {
         this.idConvocatoryVOs = idConvocatoryVOs;
     }
 
@@ -157,7 +157,7 @@ public class CompanyVO implements Serializable {
         return employeesCompanyVO;
     }
 
-    public void setEmployeesCompanyVO(List<String> employeesCompanyVO) {
+    public void setEmployeesCompanyVO(StringList employeesCompanyVO) {
         this.employeesCompanyVO = employeesCompanyVO;
     }
 
@@ -181,7 +181,7 @@ public class CompanyVO implements Serializable {
         return idCompanyUserVOs;
     }
 
-    public void setIdCompanyUserVOs(List<Long> idCompanyUserVOs) {
+    public void setIdCompanyUserVOs(LongList idCompanyUserVOs) {
         this.idCompanyUserVOs = idCompanyUserVOs;
     }
 
@@ -189,7 +189,7 @@ public class CompanyVO implements Serializable {
         return idAgreementVOs;
     }
 
-    public void setIdAgreementVOs(List<Long> idAgreementVOs) {
+    public void setIdAgreementVOs(LongList idAgreementVOs) {
         this.idAgreementVOs = idAgreementVOs;
     }
 

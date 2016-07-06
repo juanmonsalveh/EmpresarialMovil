@@ -1402,12 +1402,14 @@ containing a value of this type.
         public static final int activity_android_wsclient=0x7f030017;
         public static final int activity_consume_list=0x7f030018;
         public static final int activity_convocatory=0x7f030019;
-        public static final int support_simple_spinner_dropdown_item=0x7f03001a;
+        public static final int activity_create=0x7f03001a;
+        public static final int support_simple_spinner_dropdown_item=0x7f03001b;
     }
     public static final class menu {
         public static final int android_wsclient=0x7f0c0000;
         public static final int menu_consume_list=0x7f0c0001;
         public static final int menu_convocatory=0x7f0c0002;
+        public static final int menu_create=0x7f0c0003;
     }
     public static final class string {
         public static final int abc_action_bar_home_description=0x7f050000;
@@ -1431,6 +1433,7 @@ containing a value of this type.
         public static final int hello_world=0x7f050012;
         public static final int title_activity_consume_list=0x7f050013;
         public static final int title_activity_convocatory=0x7f050014;
+        public static final int title_activity_create=0x7f050015;
     }
     public static final class style {
         /**  API 11 theme customizations can go here. 
